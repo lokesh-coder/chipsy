@@ -1,0 +1,17 @@
+{
+  "name": "chipsy",
+  "version": "1.0.0",
+  "description": "Generate Psuedo random chips",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lokesh-coder/chipsy.git"
+  },
+  "author": "lokesh-coder",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lokesh-coder/chipsy/issues"
+  },
+  "homepage": "https://github.com/lokesh-coder/chipsy#readme"
+}
