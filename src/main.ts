@@ -7,9 +7,8 @@ const generateHSLValue = () => {
 
 const getColor = () => {
   const [h, s, l] = generateHSLValue();
-  const hslPrimaryColor = `hsla(${h}, ${Number(s) + 20}%, clamp(10%,${
-    Number(l) - 40
-  }%, 80%),0.7)`;
+  const hslPrimaryColor = `hsla(${h}, ${Number(s) + 20}%, clamp(10%,${Number(l) - 40
+    }%, 80%),0.7)`;
   const hslSecondaryColor = `hsla(${h}, clamp(40%,${Number(
     s
   )}%,70%), clamp(10%,${l}%,90%),0.5)`;
