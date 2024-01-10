@@ -29,7 +29,7 @@ export interface ButtonProps {
  * Primary UI component for user interaction
  */
 
-const setBtnColor = (btn: HTMLButtonElement, label: string) => {
+const setBtnColor = (btn: HTMLButtonElement, label?: string) => {
   const { hslPrimaryColor, hslSecondaryColor } = getColor(label);
   btn.style.backgroundColor = hslSecondaryColor;
   btn.style.color = hslPrimaryColor;
