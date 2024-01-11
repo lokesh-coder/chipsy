@@ -1,24 +1,22 @@
 import seedrandom from "seedrandom";
 
-const generateHSLValue = (seed = "") => {
+const generateHSLValue = (seed = ""): any => {
   const hueRand = seed ? seedrandom.xor4096(seed + "-hue")() : Math.random();
   const satRand = seed ? seedrandom.xor4096(seed + "-sat")() : Math.random();
-  const hue = (hueRand * 360).toFixed(2);
-  const saturation = (satRand * 100).toFixed(2);
-
-  const lightness = "72";
+  const hue = Number((hueRand * 360).toFixed(2));
+  const saturation = Number((satRand * 100).toFixed(2));
+  const lightness = 72;
   return [hue, saturation, lightness];
 };
 
+const clamp = (num: number, min: number, max: number) => Math.min(Math.max(num, min), max);
+
 const getColor = (seed = "") => {
   const [h, s, l] = generateHSLValue(seed);
-  const hslPrimaryColor = `hsl(${h}, ${Number(s) + 20}%, clamp(10%,${
-    Number(l) - 40
-  }%, 80%))`;
-  const hslSecondaryColor = `hsl(${h}, clamp(40%,${Number(
-    s
-  )}%,70%), clamp(10%,${l}%,90%))`;
-  return { hslPrimaryColor, hslSecondaryColor };
+  const primary: number[] = [h, clamp(s, 20, 80), clamp(l, 80, 90)];
+  const secondary = [h, clamp(primary[1] + 10, 20, 80), clamp(primary[1] + 10, 22, 31)];
+  const tertiary = [h, clamp(primary[1] + 10, 20, 80), 55];
+  return { primary, secondary, tertiary };
 };
 
 export { getColor };

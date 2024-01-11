@@ -23,21 +23,26 @@ export interface ButtonProps {
    * Button contents
    */
   label: string;
+
+  cls?: string;
 }
 
 /**
  * Primary UI component for user interaction
  */
 
+const hsl = (col: number[]) => `hsl(${col[0]}, ${col[1]}%, ${col[2]}%)`
+
 const setBtnColor = (btn: HTMLButtonElement, label?: string) => {
-  const { hslPrimaryColor, hslSecondaryColor } = getColor(label);
-  btn.style.backgroundColor = hslSecondaryColor;
-  btn.style.color = hslPrimaryColor;
-  btn.style.border = `1px solid ${hslPrimaryColor}`;
+  const { primary, secondary, tertiary } = getColor(label);
+  btn.style.backgroundColor = hsl(primary);
+  btn.style.color = hsl(secondary);
+  btn.style.border = `1px solid ${hsl(tertiary)}`;
 };
 
 export const createButton = ({
   isRandom = false,
+  cls = "",
   // size = 'medium',
   // darkBg = false,
   // variant = 'simple',
@@ -46,6 +51,7 @@ export const createButton = ({
   const btn = document.createElement("button");
   btn.type = "button";
   btn.innerText = label;
+  btn.className = `chipsy ${cls}`;
   setBtnColor(btn, label);
   btn.addEventListener("click", () => {
     if (isRandom) setBtnColor(btn);

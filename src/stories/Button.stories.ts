@@ -29,12 +29,14 @@ export const Primary: Story = {
   args: {
     isRandom: true,
     label: 'Chipsy',
+    cls: 'btn'
   },
 };
 
 export const Secondary: Story = {
   args: {
-    label: 'Secondary Button',
+    label: '#SecondaryButton',
+    cls: 'txt'
   },
 };
 
