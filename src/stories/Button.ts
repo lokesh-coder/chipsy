@@ -1,4 +1,4 @@
-import { getColor } from "../main";
+import { getLightColor, getDarkColor } from "../main";
 import "./button.css";
 
 export interface ButtonProps {
@@ -10,15 +10,7 @@ export interface ButtonProps {
   /**
    * Should use dark backgroud color?
    */
-  darkBg?: boolean;
-  /**
-   * How large should the button be?
-   */
-  size?: "small" | "medium" | "large";
-  /**
-   * How large should the button be?
-   */
-  variant?: "simple" | "counter" | "hashtag" | "with-icon";
+  colorTheme?: string;
   /**
    * Button contents
    */
@@ -33,8 +25,8 @@ export interface ButtonProps {
 
 const hsl = (col: number[]) => `hsl(${col[0]}, ${col[1]}%, ${col[2]}%)`
 
-const setBtnColor = (btn: HTMLButtonElement, label?: string) => {
-  const { primary, secondary, tertiary } = getColor(label);
+const setBtnColor = (btn: HTMLButtonElement, colorTheme?: string, label?: string) => {
+  const { primary, secondary, tertiary } = colorTheme === "light" ? getLightColor(label) : getDarkColor(label);
   btn.style.backgroundColor = hsl(primary);
   btn.style.color = hsl(secondary);
   btn.style.border = `1px solid ${hsl(tertiary)}`;
@@ -43,18 +35,16 @@ const setBtnColor = (btn: HTMLButtonElement, label?: string) => {
 export const createButton = ({
   isRandom = false,
   cls = "",
-  // size = 'medium',
-  // darkBg = false,
-  // variant = 'simple',
   label,
+  colorTheme
 }: ButtonProps) => {
   const btn = document.createElement("button");
   btn.type = "button";
   btn.innerText = label;
   btn.className = `chipsy ${cls}`;
-  setBtnColor(btn, label);
+  setBtnColor(btn, colorTheme, label);
   btn.addEventListener("click", () => {
-    if (isRandom) setBtnColor(btn);
+    if (isRandom) setBtnColor(btn, colorTheme);
   });
 
   return btn;

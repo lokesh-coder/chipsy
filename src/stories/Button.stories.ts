@@ -10,16 +10,18 @@ const meta = {
   },
   argTypes: {
     isRandom: { control: 'boolean' },
-    darkBg: { control: 'boolean' },
-    variant: {
-      control: { type: 'select' },
-      options: ['simple', 'counter', 'hashtag', 'with-icon'],
-    },
-    size: {
-      control: { type: 'select' },
-      options: ['small', 'medium', 'large'],
-    },
+    colorTheme: {
+      control: {
+        type: "inline-radio",
+      },
+      options: ["light", "dark"]
+    }
   },
+  parameters: {
+    backgrounds: {
+      disable: false
+    }
+  }
 } satisfies Meta<ButtonProps>;
 
 export default meta;

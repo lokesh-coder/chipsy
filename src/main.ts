@@ -11,7 +11,7 @@ const generateHSLValue = (seed = ""): any => {
 
 const clamp = (num: number, min: number, max: number) => Math.min(Math.max(num, min), max);
 
-const getColor = (seed = "") => {
+const getLightColor = (seed = "") => {
   const [h, s, l] = generateHSLValue(seed);
   const primary: number[] = [h, clamp(s, 20, 80), clamp(l, 80, 90)];
   const secondary = [h, clamp(primary[1] + 10, 20, 80), clamp(primary[1] + 10, 22, 31)];
@@ -19,4 +19,12 @@ const getColor = (seed = "") => {
   return { primary, secondary, tertiary };
 };
 
-export { getColor };
+const getDarkColor = (seed = "") => {
+  const [h, s, l] = generateHSLValue(seed);
+  const primary: number[] = [h, clamp(s, 40, 80), clamp(l, 14, 28)];
+  const secondary = [h, clamp(primary[1] + 10, 30, 80), clamp(primary[1] + 10, 70, 80)];
+  const tertiary = [h, clamp(primary[1] + 10, 30, 80), clamp(primary[1] + 10, 55, 60)];
+  return { primary, secondary, tertiary };
+};
+
+export { getLightColor, getDarkColor };

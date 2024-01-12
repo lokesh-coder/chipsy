@@ -1,6 +1,6 @@
 {
   "name": "chipsy",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Generate Psuedo random chips",
   "main": "dist/chipsy.umd.js",
   "module": "dist/chipsy.mjs",
