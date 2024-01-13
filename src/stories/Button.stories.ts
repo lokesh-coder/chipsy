@@ -10,6 +10,10 @@ const meta = {
   },
   argTypes: {
     isRandom: { control: 'boolean' },
+    count: { control: { type: 'number', min: 1, max: 100000, step: 1 }, defaultValue: 1, description: 'Number of buttons to generate' },
+    level: { control: { type: 'range', min: 0, max: 1, step: 0.1 }, defaultValue: 0, description: 'Color depth 0 to 1' },
+    label: { control: 'text', defaultValue: 'Chipsy', description: 'Button contents' },
+    cls: { control: 'text', defaultValue: 'btn', description: 'Button class name' },
     colorTheme: {
       control: {
         type: "inline-radio",

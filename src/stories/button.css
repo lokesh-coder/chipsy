@@ -3,12 +3,11 @@ button {
 }
 
 .chipsy {
-  padding: 5px 10px;
+  padding: 3px 6px;
   margin: 10px;
   text-decoration: none;
   display: inline-block;
-  font-size: 14px;
-  cursor: pointer;
+  font-size: 13px;
 }
 
 .chipsy:hover {
@@ -17,7 +16,7 @@ button {
 
 .btn {
   text-align: center;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
 }
 
