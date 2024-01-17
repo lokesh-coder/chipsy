@@ -10,7 +10,7 @@ const meta = {
   },
   args: {
     count: 1,
-    level: 0,
+    level: 0.5,
     isRandom: false,
     colorTheme: "light",
   },
@@ -23,7 +23,7 @@ const meta = {
     },
     level: {
       control: { type: "range", min: 0, max: 1, step: 0.1 },
-      defaultValue: 0,
+      defaultValue: 0.5,
       description: "Color depth 0 to 1",
     },
     label: {

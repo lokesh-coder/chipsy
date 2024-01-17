@@ -1,12 +1,12 @@
 import { getColors } from "../main";
 
-const hsl = (col: number[]) => `hsl(${col[0]}, ${col[1]}%, ${col[2]}%)`
+const hsla = (col: number[]) => `hsl(${col[0]}, ${col[1]}%, ${col[2]}%, ${col[3] ?? 100})`
 
 const setBtnColor = (btn: HTMLButtonElement, colorTheme?: 'light' | 'dark', label?: string, options = { level: 0 }) => {
 	const { primary, secondary, tertiary } = getColors(label, colorTheme, options);
-	btn.style.backgroundColor = hsl(primary);
-	btn.style.color = hsl(secondary);
-	btn.style.border = `1px solid ${hsl(tertiary)}`;
+	btn.style.backgroundColor = hsla(primary);
+	btn.style.color = hsla(secondary);
+	btn.style.border = `1px solid ${hsla(tertiary)}`;
 };
 
 
