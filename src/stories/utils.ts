@@ -1,4 +1,5 @@
 import { getColors } from "../main";
+import { generate } from "random-words";
 
 const hsla = (col: number[]) => `hsl(${col[0]}, ${col[1]}%, ${col[2]}%, ${col[3] ?? 100})`
 
@@ -19,10 +20,11 @@ const generateButtons = ({ count, label, colorTheme, isRandom, level, cls }: {
 	cls: string
 }) => {
 	const div = document.createElement("div");
+	const labels = generate({ exactly: count, seed: "my-seed", minLength: 4, });
 	for (let i = 0; i < count; i++) {
 		const btn = document.createElement("button");
 		btn.type = "button";
-		const labelText = label + ' #' + i
+		const labelText = labels[i]
 		btn.innerText = labelText;
 		btn.className = `chipsy ${cls}`;
 		setBtnColor(btn, colorTheme, labelText, { level });

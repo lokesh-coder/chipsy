@@ -1,13 +1,13 @@
 import seedrandom from "seedrandom";
 
-const gen = (id = '', seed = '') => seed ? seedrandom.xor4096(seed + "-" + id)() : Math.random();
+const gen = (id = '', seed = '') => seed ? seedrandom(seed + "-" + id)() : Math.random();
 const clamp = (num: number, min: number, max: number) => Math.min(Math.max(num, min), max);
 
 const generateHSLValue = (seed = ""): any => {
   const hueRand = gen('hue', seed);
   const satRand = gen('sat', seed);
   const lightRand = gen('light', seed);
-  const hue = Number((hueRand * 360).toFixed(4));
+  const hue = Number((hueRand * 360 + 180).toFixed(4));
   const saturation = Number((satRand * 100).toFixed(4));
   const lightness = 71.5 + lightRand;
   return [hue, saturation, lightness];
@@ -37,7 +37,6 @@ const getColors = (seed: string = '', theme: 'light' | 'dark' = 'light', options
   const [h, s, l] = generateHSLValue(seed);
   if (theme === 'dark') return getDarkColor(h, s, l, options.level);
   return getLightColor(h, s, l, options.level);
-
 }
 
 export { getColors };
