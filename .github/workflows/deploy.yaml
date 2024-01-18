@@ -15,6 +15,6 @@ jobs:
     - id: build-publish
       uses: bitovi/github-actions-storybook-to-github-pages@v1.0.2
       with:
-        path: storybook-static
+        path: public/playground
         install_command: yarn
         build_command: yarn build-storybook
