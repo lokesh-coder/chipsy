@@ -1,4 +1,4 @@
-import { getColors } from "../main";
+import { getColors } from "../../src/main";
 import { generate } from "random-words";
 
 const hsla = (col: number[]) => `hsl(${col[0]}, ${col[1]}%, ${col[2]}%, ${col[3] ?? 100})`
