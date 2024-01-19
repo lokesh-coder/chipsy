@@ -15,7 +15,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: 'Build'
+      - name: Build
         shell: bash
         run: |
           echo "::group::Build"
@@ -23,13 +23,33 @@ jobs:
           yarn build
           echo "::endgroup::"
 
-      - name: 'upload'
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.x'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Publish to NPM  
+        run: yarn publish packages/core
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Release to GitHub
+        shell: bash
+        run: |
+          echo "::group::Release"
+          yarn release
+          echo "::endgroup::"
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Upload artifacts
         uses: actions/upload-pages-artifact@v2
         with: 
           path: public/playground
 
-      - id: deploy
-        name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deploy
         uses: actions/deploy-pages@v3
         with:
           token: ${{ github.token }}
