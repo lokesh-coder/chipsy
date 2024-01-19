@@ -1,0 +1,30 @@
+{
+	"name": "chipsy",
+	"version": "1.0.4",
+	"description": "Generate Psuedo random chips",
+	"main": "dist/chipsy.umd.js",
+	"module": "dist/chipsy.mjs",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/lokesh-coder/chipsy.git"
+	},
+	"author": "lokesh-coder",
+	"dependencies": {
+		"seedrandom": "^3.0.5",
+		"typescript": "^5.2.2",
+		"vite": "^5.0.8"
+	},
+	"devDependencies": {
+		"@types/seedrandom": "^3.0.8"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/lokesh-coder/chipsy/issues"
+	},
+	"homepage": "https://github.com/lokesh-coder/chipsy#readme"
+}

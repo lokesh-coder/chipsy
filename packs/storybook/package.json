@@ -1,0 +1,43 @@
+{
+	"name": "chipsy-storybook",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"init": "storybook init",
+		"start": "storybook dev -p 6006 -c setup",
+		"build": "storybook build -o ../../public/playground -c setup"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/lokesh-coder/chipsy.git"
+	},
+	"author": "lokesh-coder",
+	"dependencies": {
+		"random-words": "^2.0.0",
+		"seedrandom": "^3.0.5",
+		"storybook": "^7.6.7",
+		"typescript": "^5.2.2",
+		"vite": "^5.0.8",
+		"chipsy": "*"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/lokesh-coder/chipsy/issues"
+	},
+	"homepage": "https://github.com/lokesh-coder/chipsy#readme",
+	"devDependencies": {
+		"@storybook/addon-essentials": "^7.6.7",
+		"@storybook/addon-interactions": "^7.6.7",
+		"@storybook/addon-links": "^7.6.7",
+		"@storybook/addon-onboarding": "^1.0.10",
+		"@storybook/blocks": "^7.6.7",
+		"@storybook/html": "^7.6.7",
+		"@storybook/html-vite": "^7.6.7",
+		"@storybook/react": "^7.6.7",
+		"@storybook/react-vite": "^7.6.7",
+		"@storybook/test": "^7.6.7",
+		"@types/seedrandom": "^3.0.8",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	}
+}
