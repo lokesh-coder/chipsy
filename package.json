@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "start": "lerna run start --stream",
-    "build": "lerna run build --stream"
+    "build": "lerna run build --stream",
+    "release": "lerna version --yes --conventional-commits --create-release github"
   },
   "repository": {
     "type": "git",
