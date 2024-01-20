@@ -1,6 +1,6 @@
 {
 	"name": "chipsy-storybook",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"private": true,
 	"scripts": {
 		"init": "storybook init",
@@ -13,7 +13,7 @@
 	},
 	"author": "lokesh-coder",
 	"dependencies": {
-		"chipsy": "^1.1.0",
+		"chipsy": "^1.1.1",
 		"random-words": "^2.0.0",
 		"seedrandom": "^3.0.5",
 		"storybook": "^7.6.7",
