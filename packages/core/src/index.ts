@@ -1,12 +1,10 @@
-import seedrandom from "seedrandom";
+import prng from "quick-prng"
 
-const gen = (id = '', seed = '') => seed ? seedrandom(seed + "-" + id)() : Math.random();
+const gen = (id = '', seed = '') => seed ? prng(seed + "-" + id) : Math.random();
 const clamp = (num: number, min: number, max: number) => Math.min(Math.max(num, min), max);
 
 const generateHSLValue = (seed = ""): any => {
-  const hueRand = gen('hue', seed);
-  const satRand = gen('sat', seed);
-  const lightRand = gen('light', seed);
+  const [hueRand, satRand, lightRand] = ["hue", "sat", "light"].map((id) => gen(id, seed));
   const hue = Number((hueRand * 360 + 180).toFixed(4));
   const saturation = Number((satRand * 100).toFixed(4));
   const lightness = 71.5 + lightRand;

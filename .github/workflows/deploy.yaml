@@ -44,7 +44,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish to NPM  
-        run: yarn publish packages/core
+        run: yarn publish packages/core && yarn publish packages/quick-prng
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 

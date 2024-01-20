@@ -1,4 +1,6 @@
 import type { StorybookConfig } from "@storybook/html-vite";
+import { mergeConfig } from "vite";
+import tsconfigPaths from "vite-tsconfig-paths";
 
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(ts|tsx)"],
@@ -15,5 +17,12 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
+  viteFinal(config) {
+    return mergeConfig(config, {
+      resolve: {
+        alias: { chipsy: '../../../packages/core/src', "quick-prng": '../../../packages/quick-prng/src' },
+      },
+    })
+  }
 };
 export default config;
