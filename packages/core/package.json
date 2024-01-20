@@ -8,7 +8,7 @@
 		"dev": "vite",
 		"build": "tsc && vite build && yarn copy-assets",
 		"preview": "vite preview",
-		"copy-assets": "cp ../../README.md dist/README.md && cp ../../LICENSE.md dist/LICENSE.md"
+		"copy-assets": "cp ../../README.md ./README.md && cp ../../LICENSE.md ./LICENSE.md"
 	},
 	"repository": {
 		"type": "git",
