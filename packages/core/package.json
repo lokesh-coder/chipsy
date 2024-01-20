@@ -6,8 +6,9 @@
 	"module": "dist/chipsy.mjs",
 	"scripts": {
 		"dev": "vite",
-		"build": "tsc && vite build",
-		"preview": "vite preview"
+		"build": "tsc && vite build && yarn copy-assets",
+		"preview": "vite preview",
+		"copy-assets": "cp ../../README.md dist/README.md && cp ../../LICENSE.md dist/LICENSE.md"
 	},
 	"repository": {
 		"type": "git",
