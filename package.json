@@ -18,12 +18,14 @@
   "homepage": "https://github.com/lokesh-coder/chipsy#readme",
   "devDependencies": {
     "@commitlint/cli": "^18.4.4",
+    "@commitlint/config-conventional": "^18.4.4",
     "@commitlint/config-lerna-scopes": "^18.4.4",
     "husky": "^8.0.3",
     "lerna": "^8.0.2"
   },
   "commitlint": {
     "extends": [
+      "@commitlint/config-conventional",
       "@commitlint/config-lerna-scopes"
     ]
   },
