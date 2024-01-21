@@ -1,31 +1,31 @@
 {
-	"name": "quick-prng",
-	"version": "1.1.1",
-	"description": "Generate Psuedo random number",
-	"main": "dist/quick-prng.umd.js",
-	"module": "dist/quick-prng.mjs",
-	"scripts": {
-		"dev": "vite",
-		"build": "tsc && vite build && yarn copy-assets",
-		"preview": "vite preview",
-		"copy-assets": "cp ../../LICENSE.md ./LICENSE.md"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/lokesh-coder/quick-prng.git"
-	},
-	"author": "lokesh-coder",
-	"dependencies": {
-		"@sindresorhus/fnv1a": "^3.1.0",
-		"park-miller": "^2.0.0"
-	},
-	"devDependencies": {
-		"typescript": "^5.2.2",
-		"vite": "^5.0.8"
-	},
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/lokesh-coder/quick-prng/issues"
-	},
-	"homepage": "https://github.com/lokesh-coder/quick-prng#readme"
+  "name": "quick-prng",
+  "version": "1.1.2",
+  "description": "Generate Psuedo random number",
+  "main": "dist/quick-prng.umd.js",
+  "module": "dist/quick-prng.mjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build && yarn copy-assets",
+    "preview": "vite preview",
+    "copy-assets": "cp ../../LICENSE.md ./LICENSE.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lokesh-coder/quick-prng.git"
+  },
+  "author": "lokesh-coder",
+  "dependencies": {
+    "@sindresorhus/fnv1a": "^3.1.0",
+    "park-miller": "^2.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lokesh-coder/quick-prng/issues"
+  },
+  "homepage": "https://github.com/lokesh-coder/quick-prng#readme"
 }
