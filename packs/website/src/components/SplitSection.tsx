@@ -9,7 +9,7 @@ type Props = {
 }
 
 const SplitSection = ({ title, subtitle, className, children, right = false }: Props) => {
-	return <div className={`relative py-unit-4xl ${className}`}>
+	return <div className={`relative py-24 ${className}`}>
 		<div className={`relative max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8 flex ${right ? "flex-row-reverse" : ""}`}>
 			<div className="w-1/2 text-center flex items-center justify-center flex-col">
 				<h2 className="text-3xl font-medium text-gray-900/85 sm:text-4xl font-title">
