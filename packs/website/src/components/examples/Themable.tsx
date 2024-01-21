@@ -1,6 +1,7 @@
 import { getColors } from "chipsy";
 import { generate } from "random-words";
 import { useEffect, useState } from "react";
+
 import RefreshIcon from "../icons/Refresh";
 
 const hsla = (col: number[]) => `hsl(${col[0]}, ${col[1]}%, ${col[2]}%, ${col[3] ?? 100})`;

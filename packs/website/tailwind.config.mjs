@@ -1,4 +1,3 @@
-import { nextui } from "@nextui-org/react";
 import patterns from "tailwindcss-bg-patterns"
 
 
@@ -17,7 +16,7 @@ export default {
     },
   },
   darkMode: "class",
-  plugins: [nextui(), patterns],
+  plugins: [patterns],
 
 }
 

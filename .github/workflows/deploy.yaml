@@ -51,7 +51,7 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-pages-artifact@v2
         with: 
-          path: public/playground
+          path: public
 
       - name: Deploy to GitHub Pages
         id: deploy

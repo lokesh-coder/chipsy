@@ -58,7 +58,6 @@ const Level = () => {
 			}}>
 				<div className={`pattern-dots pattern-bg-transparent pattern-opacity-80 pattern-size-2 absolute left-0 top-0 w-full h-full ${theme === 'light' ? "pattern-slate-100" : "pattern-slate-800"}`}></div>
 				<div className="flex gap-4 flex-wrap items-center justify-center relative z-50">
-					<Code code="console.log(33)" />
 					{[...data].map(({ label, colors }) => <button key={colors} className="border px-3 py-1 rounded leading-4" style={{
 						backgroundColor: colors.bgColorCss,
 						color: colors.textColorCss,
