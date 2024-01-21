@@ -4,7 +4,10 @@
   "scripts": {
     "start": "lerna run start --stream",
     "build": "lerna run build --stream",
-    "release": "lerna version --yes --conventional-commits --create-release github"
+    "release": "lerna version --yes --conventional-commits --create-release github",
+    "lint": "lerna run lint --parallel",
+    "lint:fix": "lerna run lint:fix --parallel",
+    "website": "yarn start --scope=chipsy-website"
   },
   "repository": {
     "type": "git",
@@ -20,8 +23,26 @@
     "@commitlint/cli": "^18.4.4",
     "@commitlint/config-conventional": "^18.4.4",
     "@commitlint/config-lerna-scopes": "^18.4.4",
+    "@typescript-eslint/eslint-plugin": "^5.54.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "astro-eslint-parser": "^0.11.0",
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-astro": "^0.31.3",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-tailwindcss": "^3.10.1",
+    "eslint-plugin-unused-imports": "^2.0.0",
     "husky": "^8.0.3",
-    "lerna": "^8.0.2"
+    "lerna": "^8.0.2",
+    "prettier": "^3.2.4",
+    "prettier-plugin-astro": "^0.8.0"
   },
   "commitlint": {
     "extends": [

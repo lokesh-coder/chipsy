@@ -1,0 +1,29 @@
+{
+  "name": "chipsy-website",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build --outDir ../../public/ --base /chipsy/",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint": "eslint . --ignore-path ../../.eslintignore --ext ts --ext tsx --ext js --ext jsx",
+    "lint:fix": "eslint --fix . --ignore-path ../../.eslintignore --ext ts --ext tsx --ext js --ext jsx"
+  },
+  "dependencies": {
+    "@astrojs/prism": "^3.0.0",
+    "@astrojs/react": "^3.0.9",
+    "@astrojs/tailwind": "^5.1.0",
+    "@nextui-org/react": "^2.2.9",
+    "astro": "^4.2.1",
+    "chipsy": "*",
+    "framer-motion": "^10.18.0",
+    "lo-icon": "^1.0.5",
+    "random-words": "^2.0.0",
+    "tailwindcss-bg-patterns": "^0.3.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}

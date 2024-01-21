@@ -1,6 +1,6 @@
 # Chipsy
 
-Chipsy is a simple, lightweight, and easy to use framework agnostic library that allows you to create beautiful multi-purpose psudeo random colors that can be used for chips, tags and more..
+Chipsy is a simple, lightweight, and easy to use framework agnostic library that allows you to create beautiful multi-purpose pseudo random colors that can be used for chips, tags and more..
 
 ![MIT License](https://img.shields.io/github/license/lokesh-coder/chipsy)
 ![Build Status](https://img.shields.io/github/actions/workflow/status/lokesh-coder/chipsy/deploy.yaml)
@@ -49,7 +49,7 @@ const colors = getColors('tag-name','light',{level:0.5});
 
 ## Features
 
-- [x] Generate psudeo random colors based on a name ( same name will always return same color )
+- [x] Generate pseudo random colors based on a name ( same name will always return same color )
 - [x] Configurable lightness level
 - [x] Supports dark and light themes (same color but different lightness level)
 - [x] Framework agnostic 

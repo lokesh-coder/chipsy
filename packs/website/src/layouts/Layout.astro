@@ -1,0 +1,110 @@
+---
+import Footer from '../components/Footer';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@700,400,600,300,500&display=swap" rel="stylesheet"/>
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="light font-body">
+		<slot />
+		<Footer/>
+	</body>
+</html>
+<style is:global>
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background: #13151a;
+		background-size: 224px;
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+
+	input[type="range"] {
+		-webkit-appearance: none;
+			appearance: none;
+			background: transparent;
+			cursor: pointer;
+			width: 15rem;
+	}
+
+	input[type="range"]:focus {
+		outline: none;
+	}
+
+	input[type="range"]::-webkit-slider-runnable-track {
+		background-color: rgba(0,0,0,0.1);
+		border-radius: 0.5rem;
+		height: 0.5rem;  
+	}
+
+	input[type="range"]::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		appearance: none;
+		margin-top: -12px;
+		border-radius: 10px;
+		background-color: currentColor;
+		height: 2rem;
+		width: 1rem;
+	}
+
+	input[type="range"]:focus::-webkit-slider-thumb {   
+		border: 1px solid currentColor;
+		outline: 3px solid currentColor;
+		outline-offset: 0.125rem; 
+		border-radius: 10px;
+	}
+
+	input[type="range"]::-moz-range-track {
+		background-color: currentColor;
+		border-radius: 0.5rem;
+		height: 0.5rem;
+	}
+
+	input[type="range"]::-moz-range-thumb {
+		border: none;
+		border-radius: 10px;
+		background-color: currentColor;
+		height: 2rem;
+		width: 1rem;
+	}
+
+	input[type="range"]:focus::-moz-range-thumb {
+		border: 1px solid currentColor;
+		outline: 3px solid currentColor;
+		outline-offset: 0.125rem; 
+	}
+</style>

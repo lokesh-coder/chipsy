@@ -1,0 +1,75 @@
+---
+import SplitSection from '../components/SplitSection';
+import Layout from '../layouts/Layout.astro';
+import InlineEditor from '../components/examples/InlineEditor';
+import Multiple from '../components/examples/Multiple';
+import Themable from '../components/examples/Themable';
+import BlendingBg from '../components/examples/BlendingBg';
+import Level from '../components/examples/Level';
+import License from '../components/examples/License';
+import { Code } from 'astro:components';
+import codeSample from '../utils/code_sample';
+---
+
+<Layout title="Chipsy">
+  <main>
+		<div class="bg-yellow-600">	
+			<div class="max-w-7xl mx-auto py-unit-4xl">
+				<div class="text-center">
+					<span class="bg-yellow-800 rounded-full px-4 py-2 text-yellow-400 text-sm opacity-50 mb-10 inline-block font-medium"> Chipsy <span class="text-xs bg-yellow-950 px-2 py-1 inline-block rounded-full leading-1 ml-2">v1.0.0</span></span>
+				</div>
+				<h1 class="text-6xl font-medium text-yellow-100 font-title text-center">A simple, lightweight and easy to use framework agnostic library that allows you to create <span class="text-yellow-300">aesthetically beautiful</span> multi-purpose pseudo random colors...
+				</h1>
+			</div>
+		</div>
+		<div class="bg-yellow-800">	
+			<div class="max-w-7xl mx-auto py-unit-2xl">
+				<div class="text-center space-x-6 flex items-center justify-center">
+					<button class=" text-amber-400 px-8 py-3 rounded-lg text-2xl flex gap-2 tracking-tight hover:scale-105 hover:opacity-70 transition-all"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 256 256"><path d="M208,104v8a48,48,0,0,1-48,48H136a32,32,0,0,1,32,32v40H104V192a32,32,0,0,1,32-32H112a48,48,0,0,1-48-48v-8a49.28,49.28,0,0,1,8.51-27.3A51.92,51.92,0,0,1,76,32a52,52,0,0,1,43.83,24h32.34A52,52,0,0,1,196,32a51.92,51.92,0,0,1,3.49,44.7A49.28,49.28,0,0,1,208,104Z" opacity="0.2"></path><path d="M208.3,75.68A59.74,59.74,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58,58,0,0,0,208.3,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.76,41.76,0,0,1,200,104Z"></path></svg> Github</button>
+					<button class=" text-amber-400 px-8 py-3 rounded-lg text-2xl flex gap-2 tracking-tight hover:scale-105 hover:opacity-70 transition-all"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 256 256"><path d="M216.86,207.57a28,28,0,0,1-24.66-7.77L150.09,152H172a51.94,51.94,0,0,0,51.2-61h0l16.36,84.17A28,28,0,0,1,216.86,207.57Z" opacity="0.2"></path><path d="M176,112H152a8,8,0,0,1,0-16h24a8,8,0,0,1,0,16ZM104,96H96V88a8,8,0,0,0-16,0v8H72a8,8,0,0,0,0,16h8v8a8,8,0,0,0,16,0v-8h8a8,8,0,0,0,0-16ZM241.48,200.65a36,36,0,0,1-54.94,4.81c-.12-.12-.24-.24-.35-.37L146.48,160h-37L69.81,205.09l-.35.37A36.08,36.08,0,0,1,44,216,36,36,0,0,1,8.56,173.75a.68.68,0,0,1,0-.14L24.93,89.52A59.88,59.88,0,0,1,83.89,40H172a60.08,60.08,0,0,1,59,49.25c0,.06,0,.12,0,.18l16.37,84.17a.68.68,0,0,1,0,.14A35.74,35.74,0,0,1,241.48,200.65ZM172,144a44,44,0,0,0,0-88H83.89A43.9,43.9,0,0,0,40.68,92.37l0,.13L24.3,176.59A20,20,0,0,0,58,194.3l41.92-47.59a8,8,0,0,1,6-2.71Zm59.7,32.59-8.74-45A60,60,0,0,1,172,160h-4.2L198,194.31a20.09,20.09,0,0,0,17.46,5.39,20,20,0,0,0,16.23-23.11Z"></path></svg> Playground</button>
+				</div>
+			</div>
+		</div>	
+		<SplitSection className="bg-white" title={"Same label same color"} subtitle={"Generates unique colors as many as you want"}>
+			<div>
+				<InlineEditor client:only="react"/>
+			</div>
+		</SplitSection>
+		<SplitSection className="bg-yellow-50" title={"Visually pleasing colors"} subtitle={"Not so dark, not so light"} right>
+			<div>
+				<Multiple client:only="react"/>
+			</div>
+		</SplitSection>
+		<SplitSection className="bg-slate-100" title={"Theming support "} subtitle={"Light or dark, no worry"}>
+			<div>
+				<Themable client:only="react"/>
+			</div>
+		</SplitSection>
+		<SplitSection className="bg-orange-50" title={"Background blending support"} subtitle={"Whatever is the background color, you get the best"} right>
+			<div>
+				<BlendingBg client:only="react"/>
+			</div>
+		</SplitSection>
+		<SplitSection className="bg-lime-50" title={"Customize the way you wanted"} subtitle={"Change levels, use colors to decorate additional elements"}>
+			<div>
+				<Level client:only="react" />
+			</div>
+		</SplitSection>
+		<SplitSection className="bg-amber-100" title={"Lightweight and easy to use"} subtitle={"Weighs around ~3kb gzipped and use it in any framework"}right>
+			<div class="rounded-lg overflow-hidden text-sm">
+				<Code code={codeSample} lang="js" theme="nord" wrap></Code>
+			</div>
+		</SplitSection>
+		<SplitSection className="bg-lime-50" title={"More than just chips and tags"} subtitle={"Use it for avatars, checkbox, hashtag, inline codes, KBD.."}>
+			<div>yes</div>
+		</SplitSection>
+		<SplitSection className="bg-green-100" title={"Read more about chipsy"} subtitle={"Codebase, playground, documentation.."} right>
+			<div>yes</div>
+		</SplitSection>
+		<SplitSection className="bg-amber-50" title={"Open sourced codebase"} subtitle={"MIT Licensed"}>
+			<div>
+				<License/>
+			</div>
+		</SplitSection>
+  </main>
+</Layout>
