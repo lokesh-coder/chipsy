@@ -44,6 +44,7 @@ jobs:
           echo "::endgroup::"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true
 
       - name: Set npmrc
         run: echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc
@@ -54,6 +55,7 @@ jobs:
         run: yarn run publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true
 
       - name: Upload artifacts
         uses: actions/upload-pages-artifact@v2

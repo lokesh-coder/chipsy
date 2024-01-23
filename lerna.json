@@ -3,6 +3,7 @@
   "version": "independent",
   "useWorkspaces": true,
   "npmClient": "yarn",
+  "loglevel": "verbose",
   "command": {
     "version": {
       "allowBranch": "main",
@@ -10,7 +11,7 @@
       "conventionalCommits": true,
       "createRelease": "github",
       "independentSubpackages": true,
-      "message": "chore: publish %s"
+      "message": "chore: publish new version %v"
     },
     "publish": {
       "removePackageFields": [

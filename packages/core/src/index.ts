@@ -15,7 +15,7 @@ const getLightColor = (h: number, s: number, l: number, level = 0) => {
   l = (25 * level) + l;
   const primary: number[] = [h, clamp(s, 20, 80), clamp(l, 71, 96), 0.5];
   const secondary = [h, clamp(primary[1] + 10, 20, 80), clamp(primary[1] + 10, 22, 31)];
-  const tertiary = [h, clamp(primary[1] + 10, 20, 80), 55, 0.3 + 0.5 * level];
+  const tertiary = [h, secondary[1], 55, 0.3 + 0.5 * level];
   return { primary, secondary, tertiary };
 };
 
@@ -23,7 +23,7 @@ const getDarkColor = (h: number, s: number, l: number, level = 0) => {
   l = 5 + (18 * level);
   const primary: number[] = [h, clamp(s, 40, 80), clamp(l, 5, 28), 0.5];
   const secondary = [h, clamp(primary[1] + 10, 30, 80), clamp(primary[1] + 10, 70, 80)];
-  const tertiary = [h, clamp(primary[1] + 10, 30, 80), clamp(primary[1] + 10, 55, 60), 0.3 + 0.5 * level];
+  const tertiary = [h, secondary[1], clamp(primary[1] + 10, 55, 60), 0.3 + 0.5 * level];
   return { primary, secondary, tertiary };
 };
 
