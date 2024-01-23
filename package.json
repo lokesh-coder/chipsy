@@ -4,10 +4,10 @@
   "scripts": {
     "start": "lerna run start --stream",
     "build": "lerna run build --stream",
-    "release": "lerna version --bump from-package",
+    "release": "lerna version",
     "lint": "lerna run lint --parallel",
     "lint:fix": "lerna run lint:fix --parallel",
-    "publish": "lerna publish --bump from-package",
+    "publish": "lerna publish from-git",
     "website": "yarn start --scope=chipsy-website"
   },
   "repository": {
