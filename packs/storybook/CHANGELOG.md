@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.6](https://github.com/lokesh-coder/chipsy/compare/chipsy-storybook@1.1.5...chipsy-storybook@1.1.6) (2024-01-23)
+
+### Bug Fixes
+
+* **chipsy-storybook:** lint fixes ([3a90750](https://github.com/lokesh-coder/chipsy/commit/3a907504c67477a26329dc24262b9a0f4cce0553))
+
 ## [1.1.5](https://github.com/lokesh-coder/chipsy/compare/chipsy-storybook@1.1.4...chipsy-storybook@1.1.5) (2024-01-23)
 
 **Note:** Version bump only for package chipsy-storybook
