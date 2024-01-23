@@ -13,7 +13,7 @@ yarn add quick-prng
 
 ```js
 import prng from 'quick-prng';
-const random = prng('seed');
+const random = prng('seed'); // returns float value beetween 0 to 1
 ```
 
 ## Credits

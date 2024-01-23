@@ -54,6 +54,7 @@ jobs:
         run: yarn run publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true
 
       - name: Upload artifacts
         uses: actions/upload-pages-artifact@v2

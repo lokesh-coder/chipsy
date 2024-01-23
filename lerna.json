@@ -7,11 +7,8 @@
     "version": {
       "allowBranch": "main",
       "yes": true,
-      "message": "chore(release): publish %s",
       "conventionalCommits": true,
-      "createRelease": "github",
-      "signGitTag": true,
-      "describeTag": "*lerna-project*"
+      "createRelease": "github"
     },
     "publish": {
       "removePackageFields": [

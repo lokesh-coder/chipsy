@@ -1,5 +1,5 @@
-import ParkMiller from 'park-miller';
 import fnv1a from '@sindresorhus/fnv1a';
+import ParkMiller from 'park-miller';
 
 
 const generate = (seed: string) => {
