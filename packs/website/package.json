@@ -1,7 +1,7 @@
 {
   "name": "chipsy-website",
   "type": "module",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "private": true,
   "scripts": {
     "dev": "astro dev",
@@ -16,7 +16,7 @@
     "@astrojs/react": "^3.0.9",
     "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.2.1",
-    "chipsy": "^1.1.4",
+    "chipsy": "^1.1.5",
     "framer-motion": "^10.18.0",
     "lo-icon": "^1.0.5",
     "random-words": "^2.0.0",
