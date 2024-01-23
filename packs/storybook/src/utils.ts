@@ -10,7 +10,6 @@ const setBtnColor = (btn: HTMLButtonElement, colorTheme?: 'light' | 'dark', labe
 	btn.style.border = `1px solid ${hsla(tertiary)}`;
 };
 
-
 const generateButtons = ({ count, label, colorTheme, isRandom, level, cls }: {
 	count: number,
 	label: string,

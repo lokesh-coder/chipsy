@@ -1,4 +1,5 @@
 import "./button.css";
+
 import { generateButtons } from "./utils";
 
 export interface ButtonProps {
