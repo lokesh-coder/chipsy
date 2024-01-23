@@ -9,7 +9,8 @@
       "yes": true,
       "conventionalCommits": true,
       "createRelease": "github",
-      "independentSubpackages": true
+      "independentSubpackages": true,
+      "message": "chore: publish %s"
     },
     "publish": {
       "removePackageFields": [
