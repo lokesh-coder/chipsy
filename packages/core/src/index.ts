@@ -11,7 +11,6 @@ const generateHSLValue = (seed = ""): any => {
   return [hue, saturation, lightness];
 };
 
-
 const getLightColor = (h: number, s: number, l: number, level = 0) => {
   l = (25 * level) + l;
   const primary: number[] = [h, clamp(s, 20, 80), clamp(l, 71, 96), 0.5];
@@ -28,8 +27,7 @@ const getDarkColor = (h: number, s: number, l: number, level = 0) => {
   return { primary, secondary, tertiary };
 };
 
-
-const getColors = (seed: string = '', theme: 'light' | 'dark' = 'light', options = {
+const getColors = (seed = '', theme: 'light' | 'dark' = 'light', options = {
   level: 0
 }) => {
   const [h, s, l] = generateHSLValue(seed);

@@ -1,7 +1,7 @@
 {
   "name": "chipsy",
   "version": "1.1.5",
-  "description": "Generate Psuedo random chips",
+  "description": "Generate psuedo random colors for UI elements like chips, tags, badges, etc..",
   "main": "dist/chipsy.umd.js",
   "module": "dist/chipsy.mjs",
   "scripts": {
@@ -14,7 +14,22 @@
     "type": "git",
     "url": "git+https://github.com/lokesh-coder/chipsy.git"
   },
-  "author": "lokesh-coder",
+  "author": "Lokesh Rajendran<lokesh.aero@gmail.com>",
+  "keywords": [
+    "chips",
+    "tags",
+    "badges",
+    "avatar",
+    "ui",
+    "colors",
+    "prng",
+    "pseudo-random",
+    "random-colors",
+    "random-color",
+    "random-color-generator",
+    "rand",
+    "random"
+  ],
   "dependencies": {
     "quick-prng": "^1.1.5"
   },
