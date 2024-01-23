@@ -4,9 +4,10 @@
   "scripts": {
     "start": "lerna run start --stream",
     "build": "lerna run build --stream",
-    "release": "lerna version --yes --conventional-commits --create-release github",
+    "release": "lerna version --bump from-package",
     "lint": "lerna run lint --parallel",
     "lint:fix": "lerna run lint:fix --parallel",
+    "publish": "lerna publish --bump from-package",
     "website": "yarn start --scope=chipsy-website"
   },
   "repository": {
@@ -23,6 +24,10 @@
     "@commitlint/cli": "^18.4.4",
     "@commitlint/config-conventional": "^18.4.4",
     "@commitlint/config-lerna-scopes": "^18.4.4",
+    "@lerna-lite/cli": "^3.2.1",
+    "@lerna-lite/publish": "^3.2.1",
+    "@lerna-lite/run": "^3.2.1",
+    "@lerna-lite/version": "^3.2.1",
     "@typescript-eslint/eslint-plugin": "^5.54.0",
     "@typescript-eslint/parser": "^6.19.0",
     "astro-eslint-parser": "^0.11.0",
@@ -40,7 +45,6 @@
     "eslint-plugin-tailwindcss": "^3.10.1",
     "eslint-plugin-unused-imports": "^2.0.0",
     "husky": "^8.0.3",
-    "lerna": "^8.0.2",
     "prettier": "^3.2.4",
     "prettier-plugin-astro": "^0.8.0"
   },
