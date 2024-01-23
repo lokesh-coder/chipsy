@@ -6,7 +6,7 @@ Lightweight pseudo-random number generator.
 
 ```sh
 npm install quick-prng
-yarn add quick-prng
+yarn add quick-prng // returns a float between 0 and 1
 ```
 
 ## Usage
