@@ -11,7 +11,7 @@
       "conventionalCommits": true,
       "createRelease": "github",
       "independentSubpackages": true,
-      "message": "chore: publish new version %v"
+      "message": "chore: publish new version"
     },
     "publish": {
       "removePackageFields": [

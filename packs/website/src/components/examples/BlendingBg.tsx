@@ -21,13 +21,13 @@ const BlendingBg = () => {
 	const [data, setData] = useState<any[]>([]);
 	const [bg, setBg] = useState<string>("");
 	const [seed, setSeed] = useState<string>("chipsy");
-	const [theme, setTheme] = useState<string>("");
+	const [theme, setTheme] = useState<"light" | "dark">("light");
 
 	const onRefresh = () => {
 		setSeed(generate(1)[0]);
 	}
 
-	const onSetBg = (bg: string, theme: string) => {
+	const onSetBg = (bg: string, theme: "light" | "dark") => {
 		setBg(bg);
 		setTheme(theme)
 		setData(generate({ exactly: count, seed, minLength: 4 }).map((x) => ({
@@ -44,7 +44,7 @@ const BlendingBg = () => {
 	console.log(data)
 
 	return (
-		<div className="flex flex-col items-center gap-16">
+		<div className="flex flex-col items-center gap-4">
 			<div className="flex gap-4 flex-wrap items-center justify-center p-10 rounded" style={{
 				backgroundColor: bg,
 			}}>

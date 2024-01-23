@@ -26,7 +26,7 @@ const InlineEditor = () => {
         color: textColorCss,
         borderColor: borderColorCss,
       }}>{label}</button>
-      <input type="text" placeholder="type here.." defaultValue={label} onChange={onLabelChange} className="bg-white border focus:border-dashed border-slate-300 rounded inline-block w-44 px-4 py-1 focus:outline-none focus:ring-0 focus:ring-offset-0 focus:border-slate-200 focus:bg-slate-50" maxLength={50} />
+      <input type="text" placeholder="type here.." defaultValue={label} onChange={onLabelChange} className="hover:bg-white border border-dashed border-slate-300 rounded inline-block w-44 px-4 py-1 focus:outline-none focus:ring-0 focus:ring-offset-0 focus:border-slate-200 bg-slate-50 focus:border-solid" maxLength={50} />
     </div>
   );
 };

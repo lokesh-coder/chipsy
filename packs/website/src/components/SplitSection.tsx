@@ -15,7 +15,7 @@ const SplitSection = ({ title, subtitle, className, children, right = false }: P
 				<h2 className="text-3xl font-medium text-gray-900/85 sm:text-4xl font-title">
 					{title}
 				</h2>
-				<p className="mt-3 text-xl text-gray-600 sm:mt-4">
+				<p className="mt-3 text-xl text-gray-900/50 sm:mt-4">
 					{subtitle}
 				</p>
 			</div>

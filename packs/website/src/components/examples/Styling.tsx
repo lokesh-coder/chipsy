@@ -102,8 +102,8 @@ const Styling = () => {
 	})));
 
 	return (
-		<div className="flex flex-col items-center gap-16">
-			<div className="flex gap-4 flex-wrap items-center justify-center p-10 rounded" style={{
+		<div className="flex flex-col items-center gap-6">
+			<div className="flex gap-4 flex-wrap items-center justify-center p-10 rounded h-48" style={{
 			}}>
 				{[...data].map(({ label, colors }) => allButtons[index](label, colors.bgColorCss, colors.textColorCss, colors.borderColorCss))}
 			</div>

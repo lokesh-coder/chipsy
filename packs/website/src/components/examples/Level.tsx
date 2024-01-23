@@ -53,7 +53,7 @@ const Level = () => {
 
 	return (
 		<div className="flex flex-col items-center gap-16">
-			<div className="p-10 rounded-lg relative" style={{
+			<div className="p-10 rounded-lg relative h-44 flex items-center" style={{
 				backgroundColor: bg,
 			}}>
 				<div className={`pattern-dots pattern-bg-transparent pattern-opacity-80 pattern-size-2 absolute left-0 top-0 w-full h-full ${theme === 'light' ? "pattern-slate-100" : "pattern-slate-800"}`}></div>

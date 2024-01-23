@@ -8,6 +8,8 @@ import BlendingBg from '../components/examples/BlendingBg';
 import Level from '../components/examples/Level';
 import License from '../components/examples/License';
 import Styling from '../components/examples/Styling';
+import Usecases from '../components/examples/Usecases';
+import More from '../components/examples/More';
 import { Code } from 'astro:components';
 import codeSample from '../utils/code_sample';
 ---
@@ -66,11 +68,15 @@ import codeSample from '../utils/code_sample';
 				<Code code={codeSample} lang="js" theme="nord" wrap></Code>
 			</div>
 		</SplitSection>
-		<SplitSection className="bg-lime-50" title={"More than just chips and tags"} subtitle={"Use it for avatars, checkbox, hashtag, inline codes, KBD.."} right>
-			<div>YTA</div>
+		<SplitSection className="bg-lime-50" title={"More than just chips and tags"} subtitle={"Use it for avatars, checkbox, charts, inline codes, KBD.."} right>
+			<div>
+				<Usecases client:only="react"/>
+			</div>
 		</SplitSection>
 		<SplitSection className="bg-green-100" title={"Read more about chipsy"} subtitle={"Codebase, playground, documentation.."}>
-			<div>YTA</div>
+			<div>
+				<More/>
+			</div>
 		</SplitSection>
 		<SplitSection className="bg-amber-50" title={"Open sourced codebase"} subtitle={"MIT Licensed"} right>
 			<div>
