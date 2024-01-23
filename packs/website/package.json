@@ -1,7 +1,7 @@
 {
   "name": "chipsy-website",
   "type": "module",
-  "version": "1.1.4",
+  "version": "",
   "private": true,
   "scripts": {
     "dev": "astro dev",

@@ -1,6 +1,6 @@
 {
   "name": "quick-prng",
-  "version": "1.1.4",
+  "version": "",
   "description": "Generate Psuedo random number",
   "main": "dist/quick-prng.umd.js",
   "module": "dist/quick-prng.mjs",
