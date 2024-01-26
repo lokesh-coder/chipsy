@@ -14,9 +14,9 @@ import { Code } from 'astro:components';
 import codeSample from '../utils/code_sample';
 
 
-const response = await fetch('https://api.github.com/repos/lokesh-coder/chipsy/tags');
-const data = await response.json();
-const currentVersion = data[0].name;
+// const response = await fetch('https://api.github.com/repos/lokesh-coder/chipsy/tags');
+// const data = await response.json();
+// const currentVersion = data[0].name;
 
 ---
 
@@ -25,9 +25,9 @@ const currentVersion = data[0].name;
 		<div class="bg-sky-950 light font-body">	
 			<div class="max-w-7xl mx-auto py-24">
 				<div class="text-center">
-					<span class="bg-sky-700 rounded-full px-4 py-2 text-white text-sm mb-10 inline-block font-bold"> Chipsy <span class="text-xs bg-sky-950 px-2 py-1 inline-block rounded-full leading-1 ml-2">{currentVersion}</span></span>
+					<span class="bg-sky-700 rounded-full px-4 py-2 text-white text-sm mb-10 inline-block font-bold"> Chipsy <span class="text-xs bg-sky-950 px-2 py-1 inline-block rounded-full leading-1 ml-2">v1.1.7</span></span>
 				</div>
-				<h1 class="text-6xl font-medium text-yellow-100 font-title text-center">A simple, lightweight and easy to use, framework agnostic library that allows you to create <span class="text-orange-500 underline">aesthetically beautiful</span> multi-purpose pseudo random colors...
+				<h1 class="text-6xl font-medium text-yellow-100 font-title text-center">A simple, lightweight and easy to use, framework agnostic library that allows you to create <span class="text-green-500 underline">aesthetically beautiful</span> multi-purpose pseudo random colors...
 				</h1>
 			</div>
 		</div>
@@ -39,52 +39,52 @@ const currentVersion = data[0].name;
 				</div>
 			</div>
 		</div>	
-		<SplitSection className="bg-white" title={"Same label same color"} subtitle={"Generates unique colors as many as you want"}>
+		<SplitSection className="bg-amber-500" title={"Same label same color"} subtitle={"Generates unique colors as many as you want"}>
 			<div>
 				<InlineEditor client:only="react"/>
 			</div>
 		</SplitSection>
-		<SplitSection className="bg-yellow-50" title={"Visually pleasing colors"} subtitle={"Not so dark, not so light"} right>
+		<SplitSection className="bg-green-500" title={"Visually pleasing colors"} subtitle={"Not so dark, not so light"} right>
 			<div>
 				<Multiple client:only="react"/>
 			</div>
 		</SplitSection>
-		<SplitSection className="bg-slate-100" title={"Theming support "} subtitle={"Light or dark, no worry"}>
+		<SplitSection className="bg-gray-500" title={"Theming support "} subtitle={"Light or dark, no worry"}>
 			<div>
 				<Themable client:only="react"/>
 			</div>
 		</SplitSection>
-		<SplitSection className="bg-orange-50" title={"Background blending support"} subtitle={"Whatever is the background color, you get the best"} right>
+		<SplitSection className="bg-orange-500" title={"Background blending support"} subtitle={"Whatever is the background color, you get the best"} right>
 			<div>
 				<BlendingBg client:only="react"/>
 			</div>
 		</SplitSection>
-		<SplitSection className="bg-lime-50" title={"Customize the way you wanted"} subtitle={"Change levels, use colors to decorate additional elements"}>
+		<SplitSection className="bg-lime-500" title={"Customize the way you wanted"} subtitle={"Change levels, use colors to decorate additional elements"}>
 			<div>
 				<Level client:only="react" />
 			</div>
 		</SplitSection>		
-		<SplitSection className="bg-red-50" title={"Use it in your own way"} subtitle={"Use colors and styles in a way you like"} right>
+		<SplitSection className="bg-red-500" title={"Use it in your own way"} subtitle={"Use colors and styles in a way you like"} right>
 			<div>
 				<Styling client:only="react" />
 			</div>
 		</SplitSection>
-		<SplitSection className="bg-amber-100" title={"Lightweight and easy to use"} subtitle={"Weighs around ~3kb gzipped and use it in any framework"}>
+		<SplitSection className="bg-amber-500" title={"Lightweight and easy to use"} subtitle={"Weighs around ~3kb gzipped and use it in any framework"}>
 			<div class="rounded-lg overflow-hidden text-sm">
-				<Code code={codeSample} lang="js" theme="nord" wrap></Code>
+				<Code code={codeSample} lang="js" theme="min-light" wrap></Code>
 			</div>
 		</SplitSection>
-		<SplitSection className="bg-lime-50" title={"More than just chips and tags"} subtitle={"Use it for avatars, checkbox, charts, inline codes, KBD.."} right>
+		<SplitSection className="bg-lime-500" title={"More than just chips and tags"} subtitle={"Use it for avatars, checkbox, charts, inline codes, KBD.."} right>
 			<div>
 				<Usecases client:only="react"/>
 			</div>
 		</SplitSection>
-		<SplitSection className="bg-green-100" title={"Read more about chipsy"} subtitle={"Codebase, playground, documentation.."}>
+		<SplitSection className="bg-green-500" title={"Read more about chipsy"} subtitle={"Codebase, playground, documentation.."}>
 			<div>
 				<More/>
 			</div>
 		</SplitSection>
-		<SplitSection className="bg-amber-50" title={"Open sourced codebase"} subtitle={"MIT Licensed"} right>
+		<SplitSection className="bg-yellow-500" title={"Open sourced codebase"} subtitle={"MIT Licensed"} right>
 			<div>
 				<License/>
 			</div>

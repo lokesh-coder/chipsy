@@ -9,21 +9,31 @@ type Props = {
 }
 
 const SplitSection = ({ title, subtitle, className, children, right = false }: Props) => {
-	return <div className={`relative py-24 ${className}`}>
-		<div className={`relative max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8 flex ${right ? "flex-row-reverse" : ""}`}>
-			<div className="w-1/2 text-center flex items-center justify-center flex-col">
-				<h2 className="text-3xl font-medium text-gray-900/85 sm:text-4xl font-title">
+	return <div className={`relative py-24 min-h-svh flex `}>
+		<div className={`absolute w-full h-full top-0 flex ${right ? "flex-row-reverse" : ""}`}>
+			<div className={`w-1/2 h-full ${className}`}></div>
+			<div className={`w-1/2 h-full ${className}`} style={{
+				"--tw-bg-opacity": 0.1
+			} as any}></div>
+		</div>
+		<div className={`flex-1 relative md:max-w-7xl lg:max-w-full mx-auto flex ${right ? "flex-row-reverse" : ""}`}>
+			<div className="w-1/2 text-center flex items-center justify-center flex-col rounded">
+				<h2 className={`text-3xl font-medium text-white sm:text-4xl font-title`} style={{
+					"--tw-bg-opacity": 0.1
+				} as any}>
 					{title}
 				</h2>
-				<p className="mt-3 text-xl text-gray-900/50 sm:mt-4">
+				<p className="mt-3 text-xl text-white/70 sm:mt-4">
 					{subtitle}
 				</p>
 			</div>
-			<div className="w-1/2 px-4">
-				{children}
+			<div className="w-1/2 px-4 flex items-center justify-center">
+				<div className='flex-1'>
+					{children}
+				</div>
 			</div>
 		</div>
-	</div>
+	</div >
 }
 
 export default SplitSection;
